@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Antigen-Guided Antibody Design Analysis</title>
+  <meta name="description" content="Computational antibody design report with affinity, contact, sequence similarity, and candidate ranking analysis.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <nav>
+      <a href="#overview">Overview</a>
+      <a href="#results">Results</a>
+      <a href="#figures">Figures</a>
+      <a href="#downloads">Downloads</a>
+    </nav>
+    <section class="hero-grid">
+      <div>
+        <p class="eyebrow">Computational antibody design</p>
+        <h1>Antigen-Guided Antibody Design Analysis</h1>
+        <p class="lead">A GitHub Pages project summary for the <code>Zolbetuximab_tarlatamab_test</code> design run, covering candidate generation, interface-contact scoring, sequence similarity, and prioritization for downstream validation.</p>
+        <div class="actions">
+          <a class="button primary" href="assets/report/Zolbetuximab_tarlatamab_antibody_design_report_EN.docx">Download English DOCX Report</a>
+          <a class="button" href="data/final_ranking.csv">Download Ranking CSV</a>
+        </div>
+      </div>
+      <img src="assets/figures/project_workflow_overview.png" alt="Project workflow overview">
+    </section>
+  </header>
+  <main>
+    <section id="overview" class="section">
+      <h2>Project Overview</h2>
+      <p>The workflow produced <strong>80 final antibody design candidates</strong> and <strong>160 heavy/light chain sequence records</strong>. The strongest candidate in this batch is <code>samples_design_4_dldesign_3_best</code>, with a composite affinity score of <strong>15,360.5</strong>.</p>
+      <div class="metrics"><article class="metric"><span>Final candidates</span><strong>80</strong></article>
+<article class="metric"><span>Sequence records</span><strong>160</strong></article>
+<article class="metric"><span>Top score</span><strong>15,360.5</strong></article>
+<article class="metric"><span>Top interface residues</span><strong>71</strong></article>
+<article class="metric"><span>VH median similarity</span><strong>51.7%</strong></article>
+<article class="metric"><span>VL median similarity</span><strong>57.0%</strong></article></div>
+      <p class="note">This page summarizes computational outputs only. It is not experimental validation, clinical evidence, or a safety assessment.</p>
+    </section>
+    <section id="results" class="section split">
+      <div>
+        <h2>Key Result</h2>
+        <p>The ranking shows a pronounced lead candidate and a smaller backup tier. The top design combines high hydrophobic-contact count, estimated polar/electrostatic contacts, and a relatively large interface residue count.</p>
+        <ul>
+          <li>Composite score range: 10 to 15,360.5</li>
+          <li>Median composite score: 1,103.5</li>
+          <li>Mean composite score: 1,987.6</li>
+          <li>Heavy-chain median similarity vs Zanidatamab: 51.7%</li>
+          <li>Light-chain median similarity vs Zanidatamab: 57.0%</li>
+        </ul>
+      </div>
+      <img src="assets/figures/07_ranking_B.png" alt="Top 10 ranked candidates">
+    </section>
+    <section class="section">
+      <h2>Top 10 Candidates</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Rank</th><th>Candidate</th><th>Score</th><th>Hydrophobic</th><th>H-bond</th><th>Salt bridge</th><th>Interface residues</th></tr></thead>
+          <tbody><tr><td>1</td><td><code>samples_design_4_dldesign_3_best</code></td><td>15,360.5</td><td>7,424</td><td>146</td><td>258</td><td>71</td></tr>
+<tr><td>2</td><td><code>samples_design_14_dldesign_2_best</code></td><td>8,746.5</td><td>3,654</td><td>50</td><td>1,331</td><td>65</td></tr>
+<tr><td>3</td><td><code>samples_design_10_dldesign_1_best</code></td><td>8,632</td><td>3,627</td><td>138</td><td>1,131</td><td>80</td></tr>
+<tr><td>4</td><td><code>samples_design_13_dldesign_2_best</code></td><td>7,318.5</td><td>3,569</td><td>56</td><td>67</td><td>59</td></tr>
+<tr><td>5</td><td><code>samples_design_17_dldesign_0_best</code></td><td>6,675</td><td>2,864</td><td>51</td><td>830</td><td>81</td></tr>
+<tr><td>6</td><td><code>samples_design_15_dldesign_0_best</code></td><td>6,277.5</td><td>2,919</td><td>24</td><td>372</td><td>63</td></tr>
+<tr><td>7</td><td><code>samples_design_9_dldesign_3_best</code></td><td>6,060.5</td><td>2,641</td><td>41</td><td>681</td><td>72</td></tr>
+<tr><td>8</td><td><code>samples_design_4_dldesign_1_best</code></td><td>5,846</td><td>2,778</td><td>3</td><td>256</td><td>59</td></tr>
+<tr><td>9</td><td><code>samples_design_19_dldesign_0_best</code></td><td>5,522</td><td>2,390</td><td>106</td><td>555</td><td>56</td></tr>
+<tr><td>10</td><td><code>samples_design_7_dldesign_3_best</code></td><td>5,485.5</td><td>2,295</td><td>93</td><td>717</td><td>78</td></tr></tbody>
+        </table>
+      </div>
+    </section>
+    <section id="figures" class="section">
+      <h2>Analysis Figures</h2>
+      <p>The original multi-panel figures were split into readable subfigures for the web page and English report.</p>
+      <div class="gallery"><figure><img src="assets/figures/project_workflow_overview.png" alt="Workflow"><figcaption>Workflow</figcaption></figure>
+<figure><img src="assets/figures/02_affinity_distribution_A.png" alt="Affinity distribution"><figcaption>Affinity distribution</figcaption></figure>
+<figure><img src="assets/figures/02_affinity_distribution_B.png" alt="Benchmark comparison"><figcaption>Benchmark comparison</figcaption></figure>
+<figure><img src="assets/figures/04_interface_contacts_A.png" alt="Interface contact types"><figcaption>Interface contact types</figcaption></figure>
+<figure><img src="assets/figures/04_interface_contacts_B.png" alt="Hydrophobic contacts vs affinity"><figcaption>Hydrophobic contacts vs affinity</figcaption></figure>
+<figure><img src="assets/figures/07_ranking_A.png" alt="Full candidate ranking"><figcaption>Full candidate ranking</figcaption></figure>
+<figure><img src="assets/figures/07_ranking_B.png" alt="Top 10 ranking"><figcaption>Top 10 ranking</figcaption></figure>
+<figure><img src="assets/figures/12_drug_candidate_A.png" alt="Tier classification"><figcaption>Tier classification</figcaption></figure>
+<figure><img src="assets/figures/03_sequence_similarity_A.png" alt="VH similarity"><figcaption>VH similarity</figcaption></figure>
+<figure><img src="assets/figures/03_sequence_similarity_B.png" alt="VL similarity"><figcaption>VL similarity</figcaption></figure>
+<figure><img src="assets/figures/10_affinity_novelty_bubble.png" alt="Affinity vs novelty"><figcaption>Affinity vs novelty</figcaption></figure>
+<figure><img src="assets/figures/05_cdr_heatmap.png" alt="CDR heatmap"><figcaption>CDR heatmap</figcaption></figure>
+<figure><img src="assets/figures/13_backbone_quality_D.png" alt="Backbone by sequence heatmap"><figcaption>Backbone by sequence heatmap</figcaption></figure>
+<figure><img src="assets/figures/14_clinical_pipeline.png" alt="Development path"><figcaption>Development path</figcaption></figure></div>
+    </section>
+    <section class="section split">
+      <div>
+        <h2>Recommended Next Steps</h2>
+        <ol>
+          <li>Visually inspect top PDB models for interface geometry and CDR orientation.</li>
+          <li>Select 3-5 non-redundant candidates for expression and binding assays.</li>
+          <li>Measure binding using SPR, BLI, ELISA, or an equivalent method.</li>
+          <li>Add early developability checks before any major optimization campaign.</li>
+        </ol>
+      </div>
+      <img src="assets/figures/14_clinical_pipeline.png" alt="Development path">
+    </section>
+    <section id="downloads" class="section">
+      <h2>Downloads</h2>
+      <div class="download-grid">
+        <a href="assets/report/Zolbetuximab_tarlatamab_antibody_design_report_EN.docx">English DOCX report</a>
+        <a href="data/final_ranking.csv">Final ranking CSV</a>
+        <a href="data/affinity_scores.csv">Affinity scores CSV</a>
+        <a href="data/sequence_similarity.csv">Sequence similarity CSV</a>
+        <a href="data/designed_sequences.fasta">Designed sequences FASTA</a>
+        <a href="structures/top_candidates/">Top candidate PDB folder</a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>Generated from local computational outputs on 2026-07-14. Confirm target names, reference labels, disclosure permissions, and experimental status before public release.</p>
+  </footer>
+</body>
+</html>
